@@ -46,4 +46,6 @@ if ( ! function_exists( 'wp_routes_do_parse_request' ) ) {
 	}
 }
 
-add_filter( 'do_parse_request', 'wp_routes_do_parse_request', 1, 3 );
+if ( function_exists( 'add_filter' ) ) {
+	add_filter( 'do_parse_request', 'wp_routes_do_parse_request', 1, 3 );
+}
